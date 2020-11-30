@@ -48,3 +48,7 @@ object Rule {
 
 @ConfiguredJsonCodec()
 final case class ProjectConfig(rules: List[Rule])
+
+object ProjectConfig {
+  val empty = ProjectConfig(Nil)
+}
