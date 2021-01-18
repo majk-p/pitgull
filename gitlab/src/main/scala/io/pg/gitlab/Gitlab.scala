@@ -43,7 +43,7 @@ object Gitlab {
     projectId: Long,
     mergeRequestIid: Long,
     status: Option[MergeRequestInfo.Status],
-    authorEmail: Option[String],
+    authorUsername: String,
     description: Option[String],
     needsRebase: Boolean,
     hasConflicts: Boolean
@@ -136,7 +136,7 @@ object Gitlab {
       )(
         mergeRequestIid: Long,
         status: Option[MergeRequestInfo.Status],
-        authorEmail: Option[String],
+        authorUsername: String,
         description: Option[String],
         needsRebase: Boolean,
         hasConflicts: Boolean
@@ -144,7 +144,7 @@ object Gitlab {
         projectId = projectId,
         mergeRequestIid = mergeRequestIid,
         status = status,
-        authorEmail = authorEmail,
+        authorUsername = authorUsername,
         description = description,
         needsRebase = needsRebase,
         hasConflicts = hasConflicts
